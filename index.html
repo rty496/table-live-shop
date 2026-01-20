@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Каталог (Таблична верстка)</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #fff;
+    color: #0b0f14;
+  }
+  /* Обмежувач ширини (замість .w) */
+  .main-container {
+    width: 360px;
+    margin: 0 auto;
+  }
+  input.search-input {
+    width: 100%;
+    height: 38px;
+    border: 2px solid #178a3a;
+    border-radius: 8px;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .cat-btn {
+    border: 2px solid #178a3a;
+    background: #fff;
+    border-radius: 8px;
+    height: 42px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .tab-link {
+    text-decoration: none;
+    color: #178a3a;
+    font-weight: bold;
+    padding: 10px 0;
+    display: block;
+  }
+  .active-tab {
+    border-bottom: 3px solid #178a3a;
+  }
+  .price {
+    color: #178a3a;
+    font-weight: 800;
+  }
+  .top-img-box {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    text-align: center;
+    height: 112px;
+  }
+  .top-img-box img {
+    max-height: 100px;
+    max-width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<table class="main-container" border="0" cellspacing="0" cellpadding="10" align="center">
+  <!-- HEADER: Пошук та Категорії -->
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="65%">
+            <input type="text" class="search-input" placeholder="Сковородки">
+          </td>
+          <td width="5%">&nbsp;</td>
+          <td width="30%">
+            <button class="cat-btn" style="width: 100%;">Категории ▾</button>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- TABS: Навігація -->
+  <tr>
+    <td style="border-bottom: 1px solid #e5e7eb; padding-bottom: 0;">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="active-tab" style="padding-right: 15px;"><a href="#" class="tab-link">Новые</a></td>
+          <td style="padding-right: 15px;"><a href="#" class="tab-link">Б/У</a></td>
+          <td style="padding-right: 15px;"><a href="#" class="tab-link">Услуги</a></td>
+          <td><a href="#" class="tab-link">Видео</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- SORTBAR: Сортування -->
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td style="font-size: 12px; color: #777; border-bottom: 2px solid #178a3a; padding-bottom: 5px;">от дешевых к дорогим</td>
+          <td align="right" style="font-size: 12px; color: #777; padding-bottom: 5px;">от дорогих к дешевым</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- SECTION HEADER -->
+  <tr>
+    <td style="padding-top: 20px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><strong style="font-size: 18px;">ТОП</strong></td>
+          <td align="right" style="font-size: 12px; color: #444;">листайте <span style="color:#111">→</span></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- HORIZONTAL ROW: Картки товарів (імітація через вкладену таблицю) -->
+  <tr>
+    <td>
+      <div style="overflow-x: auto;">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <!-- Картка 1 -->
+            <td width="130" style="padding-right: 16px;">
+              <div class="top-img-box">
+                <img src="img/products/pan_1.jpg" alt="Сковородка">
+              </div>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tr>
+                  <td style="font-size: 13px; line-height: 1.2;">Сковородка тефлоновая</td>
+                  <td align="right" style="font-weight: bold; font-size: 12px;">★ 3.5</td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="price">2400 грн</td>
+                </tr>
+              </table>
+            </td>
+
+            <!-- Картка 2 -->
+            <td width="130" style="padding-right: 16px;">
+              <div class="top-img-box">
+                <img src="img/products/pan_6.jpg" alt="Сковородка">
+              </div>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tr>
+                  <td style="font-size: 13px; line-height: 1.2;">Сковородка с крышкой</td>
+                  <td align="right" style="font-weight: bold; font-size: 12px;">★ 4.2</td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="price">1800 грн</td>
+                </tr>
+              </table>
+            </td>
+
+            <!-- Картка 3 -->
+            <td width="130">
+              <div class="top-img-box">
+                <img src="img/products/pan_1.jpg" alt="Сковородка">
+              </div>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tr>
+                  <td style="font-size: 13px; line-height: 1.2;">Сковородка гриль</td>
+                  <td align="right" style="font-weight: bold; font-size: 12px;">★ 4.0</td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="price">3200 грн</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+
+  <!-- FOOTER: Кнопка Показати ще -->
+  <tr>
+    <td align="center" style="padding-top: 20px;">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><strong style="font-size: 18px; color: #555;">Показать еще</strong></td>
+          <td style="color: #d11; font-size: 22px; padding-left: 10px;">➔</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>
